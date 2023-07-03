@@ -35,16 +35,16 @@ export const Button = () => {
   return (
     <>
       <div className="flex">
-        <button className="border-solid border-2 border-sky-500 py-1 px-4 hover:animate-pulse mt-5 mr-5 rounded-3xl" onClick={deleteAll}>
+        <button className=" bg-sky-500 hover:bg-sky-700 py-1 px-4  mt-5 mr-5 rounded-3xl" onClick={deleteAll}>
           DELETE ALL
         </button>
-        <button className="border-solid border-2 border-sky-500 py-1 px-4 hover:animate-pulse mt-5 rounded-3xl" onClick={fetchData}>
+        <button className=" bg-sky-500 hover:bg-sky-700 py-1 px-4  mt-5 rounded-3xl" onClick={fetchData}>
           POKEMON LIST
         </button>
       </div>
-      <div className="mt-10 text-center flex flex-wrap">
+      <div className="mt-10 text-center flex flex-wrap justify-center">
         {data.map((item) => (
-          <div key={item.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-5">
+          <div key={item.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-5 hover:scale-110">
             <Image src={item.image} alt="" width={300} height={200} className="rounded-t-lg" />
               <div className="p-5">
                   <a href="#">
