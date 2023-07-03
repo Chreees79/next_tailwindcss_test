@@ -34,14 +34,17 @@ export const Button = () => {
 
   return (
     <>
-      <div>
-        <button className="border-solid border-2 border-sky-500 py-1 px-4 hover:animate-pulse mt-5 rounded-3xl" onClick={deleteAll}>
+      <div className="flex">
+        <button className="border-solid border-2 border-sky-500 py-1 px-4 hover:animate-pulse mt-5 mr-5 rounded-3xl" onClick={deleteAll}>
           DELETE ALL
         </button>
+        <button className="border-solid border-2 border-sky-500 py-1 px-4 hover:animate-pulse mt-5 rounded-3xl" onClick={fetchData}>
+          POKEMON LIST
+        </button>
       </div>
-      <div className="mt-10 text-center">
+      <div className="mt-10 text-center flex flex-wrap">
         {data.map((item) => (
-          <div key={item.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-5">
+          <div key={item.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-5">
             <Image src={item.image} alt="" width={300} height={200} className="rounded-t-lg" />
               <div className="p-5">
                   <a href="#">
