@@ -1,16 +1,7 @@
-'use client'
-import Home from "./pages";
+import Home from "./pages/index";
 
-interface Pokemon {
-  name: string;
-  url: string;
-}
-
-interface HomeProps {
-  initialData: Pokemon[];
-}
-export default function Page({ initialData }: HomeProps) {
+export default function Page() {
   return (
-    <Home initialData={[]} />
+    <Home/>
   )
 }
